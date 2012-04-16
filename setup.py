@@ -11,14 +11,14 @@ from setuptools import setup, find_packages
 from astropy import setup_helpers
 from astropy.version_helper import get_git_devstr, generate_version_py
 
+import pyidlastro
+
 # Set affiliated package-specific settings
-PACKAGENAME = 'packagename'
-DESCRIPTION = 'Astropy affiliated package'
-LONG_DESCRIPTION = ''
-AUTHOR = ''
-AUTHOR_EMAIL = ''
+PACKAGENAME = 'pyidlastro'
+DESCRIPTION = 'Astropy affiliated package for ported IDL astrolib routines.'
+LONG_DESCRIPTION = pyidlastro.__doc__
 LICENSE = 'BSD'
-URL = 'http://astropy.org'
+URL = 'https://github.com/astropy/pyidlastro'
 
 #version should be PEP386 compatible (http://www.python.org/dev/peps/pep-0386)
 version = '0.0.dev'
@@ -91,8 +91,6 @@ setup(name=PACKAGENAME,
       requires=['astropy'],
       install_requires=['astropy'],
       provides=[PACKAGENAME],
-      author=AUTHOR,
-      author_email=AUTHOR_EMAIL,
       license=LICENSE,
       url=URL,
       long_description=LONG_DESCRIPTION,
